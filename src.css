@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*!
+Theme Name: Instituto de Ojos
+Theme URI: http://alfredo.xyz/ido
+Author: Alfredo J. Bermúdez
+Author URI:  http://alfredo.xyz/
+Description: Original wordpress theme for the Instituto de Ojos using the Whiteboard Framework
+Version: 0.16.03.04
+
+ * Built on the Whiteboard Framework
+ * http://whiteboardframework.com
+ */
+
+/*!
+ * The Whiteboard Framework is licensed under the GPL license.
+ * Feel free to use the Whiteboard Framework for commercial and non-commercial ventures.
+ * We require a link in the CSS file and request a link on the website
+*/
+
+
+@import "node_modules/normalize.css/normalize.css";
+@import "css/slick.css";
+@import "css/slick-theme.css";
+@import "css/theme.css";
+

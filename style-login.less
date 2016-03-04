@@ -1,0 +1,103 @@
+// out: style-login.css, compress: true, strictMath: true
+
+@charset "utf-8";
+
+/*---------------------------- Variables -------------------------------*/
+@grey: #bebebe;
+@lightGrey: #dfdfdf;
+@blue: rgb(0, 107, 180);
+@darkBlue: rgb(0, 80, 140);
+
+/*---------------------------- Mix-Ins ---------------------------------*/
+.boxSize {
+     box-sizing: border-box;
+}
+.blue {
+    color: @blue;
+}
+.blueBG {
+    background: @blue;
+}
+.blueButton {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #fff;
+    border-width: 0;
+    .blueBG;
+    .boxSize;
+    cursor: pointer; 
+    &:hover, &:active {
+        -ms-transform: scale(1.1); 
+        -webkit-transform: scale(1.1); 
+        transform: scale(1.1);
+        box-shadow: 0px 2px 4px rgba(0,0,0,.1);
+        -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,.1);
+        -moz-box-shadow: 0px 2px 4px rgba(0,0,0,.1);
+    }
+}
+
+
+
+body.login {
+    font-family: "aktiv-grotesk",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background: #fff;
+    
+    input[type="text"]:focus, input[type="search"]:focus, input[type="radio"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input[type="password"]:focus, input[type="checkbox"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+        border-color: @blue;
+        -webkit-box-shadow: 0 0 2px rgba(0,0,0,.1);
+        box-shadow: 0 0 2px rgba(0,0,0,.1);
+    }
+    div#login { 
+        a {
+            color: @blue;
+            &:focus {
+                color: @grey;
+                box-shadow: unset;
+                -webkit-box-shadow: unset;
+            }
+        }
+        h1 a {
+            background-image: url(images/ido-logo-small.png);
+            background-size: 100% auto;
+            background-position: center;
+            width: 140px;
+            height: 100px;
+            margin: 0 auto 12px;
+        }
+        div#login_error, p.message {
+            border-width: 1px 1px 0 6px;
+            border-style: solid;
+            border-color: @grey;
+            box-shadow: unset; 
+            -webkit-box-shadow: unset; 
+        }
+        div#login_error {
+            border-left-color: #dd3d36; 
+        }
+        p.message {
+            border-left-color: @blue;
+        }
+        form {
+            border-width: 1px;
+            border-style: solid;
+            border-color: @grey;
+            margin-top: 0;
+            box-shadow: unset;
+            -webkit-box-shadow: unset;
+            p.submit {
+                input#wp-submit {
+                    .blueButton;
+                    height: auto;
+                    line-height: auto;
+                    border: 0px;
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+}

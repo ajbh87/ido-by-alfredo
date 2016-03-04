@@ -1,0 +1,15 @@
+{
+  "name": "script",
+  "version": "1.0.0",
+  "description": "IDO",
+  "main": "main.js",
+  "author": "Alfredo Bermudez",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ugly": "uglifyjs node_modules/jquery.cssanimateauto/dist/jquery.cssAnimateAuto.min.js  scripts/slick.min.js scripts/jquery.hoverIntent.minified.js scripts/script.js -o scripts/script-min.js",
+    "css": "postcss --use postcss-import --use autoprefixer -o style-un.css src.css",
+    "nano": "postcss --use cssnano -o style.css style-un.css",
+    "cssnano": "postcss --use postcss-import --use autoprefixer --use cssnano -o style.css src.css"
+  }
+}
